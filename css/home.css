@@ -1,0 +1,155 @@
+/* Sidebar layout */
+.sidebar {
+  width: 220px;
+  background-color: #064a0d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.sidebar nav ul li {
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+  width: 100%;
+}
+
+.sidebar nav ul li:hover {
+  background-color: #0b6d16;
+}
+
+/* Contact Admin Button */
+.sidebar-contact-btn {
+  margin: 20px;
+  padding: 10px 16px;
+  background-color: #ffffff;
+  color: #064a0d;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 80%;
+}
+
+.sidebar-contact-btn:hover {
+  background-color: #d4f8d4;
+}
+
+/* Content layout */
+.content-area {
+  margin-left: 220px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  background-color: #6b3e26;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  flex-grow: 1;
+}
+
+/* Hamburger */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+  margin-right: 10px;
+  display: none;
+}
+
+/* Mobile first sidebar behavior */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .content-area {
+    margin-left: 0;
+  }
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 700px; /* Adjust as needed */
+  background-image: url('../assets/background5.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px; /* Ensure some space below it */
+}
+
+.hero-text h1 {
+  color: #6b3e26;
+  font-size: 2.5rem; /* Adjust font size as needed */
+  margin: 0;
+}
+
+.hero-text h2 {
+  color: #6b3e26;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}

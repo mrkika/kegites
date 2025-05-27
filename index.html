@@ -1,0 +1,31 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kegites Club App</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <img src="assets/preloader2.png" alt="Loading...">
+  </div>
+
+  <!-- Main Content (initially hidden) -->
+  <div id="main-content" class="background-overlay hidden">
+    <img src="assets/keg-logo.png" class="logo" alt="Kegites Club Logo">
+    <div class="prompt-box">
+      <h1>Are You Karid?</h1>
+      <div class="buttons">
+        <button onclick="askKariability()">Yes</button>
+        <button onclick="redirectToLimited()">No</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

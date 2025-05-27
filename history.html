@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kegites Club - History & Membership</title>
+  <link rel="stylesheet" href="css/book.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* Additional page-specific styles */
+    .history-container {
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      line-height: 1.6;
+      color: #333;
+    }
+    .history-container h2 {
+      color: #064a0d;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .history-container img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .history-container p {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    /* Become a member form */
+    .membership-form {
+      max-width: 600px;
+      margin: 40px auto 60px;
+      background: #f8f9f5;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+    .membership-form h2 {
+      text-align: center;
+      color: #228B22;
+      margin-bottom: 25px;
+    }
+    .membership-form input,
+    .membership-form textarea,
+    .membership-form select {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+    }
+    .membership-form button {
+      background-color: #228B22;
+      color: white;
+      border: none;
+      padding: 14px;
+      width: 100%;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .membership-form button:hover {
+      background-color: #1a6e1a;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .history-container,
+      .membership-form {
+        margin: 15px 15px 40px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+<script>
+  // Redirect if not authorized
+  if (localStorage.getItem('isKarid') !== 'true') {
+    window.location.href = 'home.html';
+  }
+</script>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <img src="assets/my-logo2.png" class="sidebar-logo" alt="Kegites Logo" />
+      <nav>
+        <ul>
+          <li onclick="navigate('home.html')">Home</li>
+          <li class="active">History</li>
+          <li onclick="navigate('ilyasis.html')">Ilyasis</li>
+          <li onclick="navigate('chiefs.html')">Chiefisis</li>
+          <li onclick="navigate('fellows.html')">Fellowsis Council</li>
+          <li onclick="navigate('book.html')">Book of Bookosis</li>
+        </ul>
+      </nav>
+      <button class="sidebar-contact-btn" onclick="contactAdmin()">Contact Admin</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <header>
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        <h1>History & Membership</h1>
+      </header>
+
+      <section class="history-container">
+        <img src="assets/history-bg.png" alt="Kegites Club History" />
+        <h2>Kegites Club Anthem</h2>
+        <p>
+          Imbibe Imbibe in Majesty<br>
+          Holy Water is good for me<br>
+          Holy Water from Kegites Tree<br>
+          That makes us happy, everyday.
+        </p>
+        <h2>Our Motto Still Remains</h2>
+        <p>
+          Unity in Diversity
+        </p>
+        
+        <h2>Our Origin</h2>
+        <p>
+          The Kegites Club is the most popular socio-cultural club in Nigeria.<br> Supreme Comradium can be traced to thirteen students of the then Nigerian College of Arts, Science and Technology, who
+          gathered themselves every evening to relax after studies. The thirteen students became the executive and periodically
+          they donated Palm Wine in turns for the consumption of the group. Not before long, history was made as they became
+          founding members of this wonderful club “The Kegites Club”. All this occurred while they were at the Ibadan Campus
+          before they were moved to the permanent site in Ile-Ife. The Club was founded in 1962 at the University of
+          Ife (now Obafemi Awolowo University) by these visionary students to promote African heritage and unity. The Palm Wine Drinkers Club as they were first called; did not only come into existence by accident but by incidence.
+        </p>
+        <p>
+          The club had its first Chief in the person of Late of Prof. Olusegun Adesina. The Club been a socio-cultural club; it was agreed that he should be called Chief as in African traditional setting. Thus, Chief
+          Olusegun Adesina was the first Chief to be coronated in 1963. Since the formation of the club, it has
+          undergone various kinds
+          of transformation, for instance; the Club had its first Female Member in 1968 in the person of L.S.F Dupe Ajayi and in
+          1974 the Club spread to other
+          institutions of higher learning across Nigeria with Ilya du Tractor (Federal College of Agriculture, Akure, Ondo
+          State, Nigeria) as the first
+          Ilya to get a Keg of Office (Accreditation) from the World Headquarters. Ile Ife, followed by University of Ibadan which is known as National Headquarters
+          <br>The Club changed its name on October 1986, during the reign of Chief Anthony Uzodima Ogidi, the then world Chief, at the
+          <strong>World Chiefsis Conference of 1986 from Palm Wine Drinkers Club to Kegites Club International and the Motto was changed from "The Basis
+            of African Peace" to "Unity in Diversity".</strong><br>
+          From inception, Kegites Club has
+          remained one Supreme
+          Club with branches (Ilyasis) in almost all institutions of hiher learning both in Nigeria and other parts of the
+          world. As at this day, table-headerare over 100
+          Ilyasis in Nigeria and Overseas. Ilyasis outside Nigeria include (but not limited to) United Kingdom (Ilya du Queen),
+          Chicago, USA (Ilya du Windy),
+          India (Ilya du Punjab) and more. The kegites club international is one and indivisible. The supremost comradium has a special language with a peculiar
+          dialectical parlance which every member is delighted to speak at all times and gatherings.
+        </p>
+
+        <h2>Purpose and Growth</h2>
+        <p>
+          The aims and objectives of kegites club is to preserve and promote African culture, promote peace among human race,
+          resuscitate the cultural awareness of our fore fathers and promote honest living and truth among all members as well as
+          to discourage tribalism and racism.
+        </p>
+
+        <h2>Common Misconceptions</h2>
+        <p>
+          Some wrongly associate the club with secret societies or cultism. In truth, the Kegites Club is cultural and social, emphasizing unity and integrity.
+        </p>
+
+        <h2>Notable Members</h2>
+        <p>
+          Many distinguished Nigerians have been and are still members, including prominent academics, politicians, and cultural
+          leaders who embody the club's values.
+          Late Obafemi Awolowo was the Eternal Grand Patron of the Club and was succeeded by Ex-President Olusegun Obasanjo.
+          Chuef Tele Ikwu a former
+          Deputy Governor of Rivers State is a Chief of RSUST, Professor Wole Soyinka is a founding member, Dr Orji Uzor Kalu is
+          a Patron and the List
+          goes on and on.
+        </p>
+        
+        <h2>Our Motto still remaineth: Unity In Diversity</h2>
+        <p>
+          <em><strong>This App is dedicated to Entities and Entities Alona. DAYZ Be Long!!! - DyDx Made It.
+          </em></strong>
+        </p>
+      </section>
+
+      
+    </main>
+  </div>
+
+  <script>
+    // Sidebar toggle (same as before)
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+
+    function navigate(page) {
+      window.location.href = page;
+    }
+
+    function contactAdmin() {
+        window.open("https://wa.me/2348137992319", "_blank");
+      }
+
+    // Membership form submit - send to WhatsApp
+    const memberForm = document.getElementById('memberForm');
+    memberForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const fullName = encodeURIComponent(document.getElementById('fullName').value.trim());
+      const institution = encodeURIComponent(document.getElementById('institution').value.trim());
+      const course = encodeURIComponent(document.getElementById('course').value.trim());
+      const matricNumber = encodeURIComponent(document.getElementById('matricNumber').value.trim());
+      const admissionYear = encodeURIComponent(document.getElementById('admissionYear').value.trim());
+      const reason = encodeURIComponent(document.getElementById('reason').value.trim());
+
+      const message = `New Kegites Club Membership Application:%0A` +
+                      `Name: ${fullName}%0A` +
+                      `Institution: ${institution}%0A` +
+                      `Course/Department: ${course}%0A` +
+                      `Matric Number: ${matricNumber}%0A` +
+                      `Year of Admission: ${admissionYear}%0A` +
+                      `Reason: ${reason}`;
+
+      // Put your WhatsApp number here, international format, no plus sign, no spaces, e.g. 2348012345678
+      const whatsappNumber = "2348137992319";
+
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+</body>
+</html>

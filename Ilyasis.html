@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kegites Club - Ilyasis</title>
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/ilyasis.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  
+<script>
+  // Redirect if not authorized
+  if (localStorage.getItem('isKarid') !== 'true') {
+    window.location.href = 'home.html';
+  }
+</script>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <img src="assets/my-logo2.png" class="sidebar-logo" alt="Kegites Logo" />
+      <nav>
+        <ul>
+          <li onclick="location.href='home.html'">Home</li>
+          <li onclick="location.href='history.html'">History</li>
+          <li onclick="location.href='ilyasis.html'">Ilyasis</li>
+          <li onclick="location.href='chiefs.html'">Chiefisis</li>
+          <li onclick="location.href='fellows.html'">Fellowsis Council</li>
+          <li onclick="location.href='book.html'">Book of Bookosis</li>
+        </ul>
+      </nav>
+      <button class="contact-admin" onclick="contactAdmin()">Contact Admin</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <header>
+        <h1>Ilyasis & Institutions</h1>
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+      </header>
+
+      <section class="ilya-table">
+        <div class="table-header">
+          <div class="col">Institution</div>
+          <div class="col">Ilya</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Obafemi Awolowo University</div>
+          <div class="col">World Heaquarters</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">University of Ibadan</div>
+          <div class="col">National Heaquarters</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">University of Lagos</div>
+          <div class="col">Ilya du Lagoon</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Delta State Polytechnic, Ogwashi-Ukwu</div>
+          <div class="col">Ilya du Terra</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">College of Education, Agbor</div>
+          <div class="col">Ilya du CEDAG</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Abia State Poly. Aba</div>
+          <div class="col">Ilya du Elephant</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Alvan Ikoku Col. Of Education</div>
+          <div class="col">Ilya du Ice</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Abia State University, Uturu</div>
+          <div class="col">Ilya du Imobraska</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Federal Polytechnic, Nekede, Owerri</div>
+          <div class="col">Ilya du Polyneked</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Imo State University</div>
+          <div class="col">Ilya du Lake</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Imo State Polytechnic</div>
+          <div class="col">Ilya du Python</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed. Uni Of Tech. Owerri</div>
+          <div class="col">Ilya du FUTO</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed Uni Of Agri. Umudike</div>
+          <div class="col">Ilya du Kokoroko</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed. Col. of Land Res Tech, Owerri</div>
+          <div class="col">Ilya du Soil</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed. Col. Of Edu. Eha. Amufu</div>
+          <div class="col">Ilya du Cassava</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Enugu State Uni Of Tech. Enugu</div>
+          <div class="col">Ilya du Engine</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">UNN, Enugu Campus</div>
+          <div class="col">Ilya du Nigeria</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Institute Of Management And Tech. Enugu</div>
+          <div class="col">Ilya du Tawinji</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Nwafor Orizu Col. Of Edu. Nsugbe</div>
+          <div class="col">Ilya du Coconut</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">UNN, Nsukka Campus Enugu</div>
+          <div class="col">Ilya du Nkasu</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Ebonyi State University, Abakaliki</div>
+          <div class="col">Ilya du Rice</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Nnamdi Azikiwe Uni. Awka</div>
+          <div class="col">Ilya du Hama</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed. Poly. Oko</div>
+          <div class="col">Ilya du Erosion</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Anambra State University, Igbariam</div>
+          <div class="col">Ilya du Igbaladun</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Anambra State University Uli Campus</div>
+          <div class="col">Ilya du Basket</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">National Metallurgical Institute Oba</div>
+          <div class="col">Ilya du Metal</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Yabatech</div>
+          <div class="col">Ilya du Tecco</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Lagos State Polytechnic</div>
+          <div class="col">Ilya du Lacoste</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed. Col. Edu. Akoka</div>
+          <div class="col">Ilya du NATECO</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Lagos State University</div>
+          <div class="col">Ilya du Akete</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Adeniran Ogunsanya College of Education, Ijanikin</div>
+          <div class="col">Ilya du LACOED</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Institute Of Oceanography- And Marine, Victorial Island, Lagos</div>
+          <div class="col">Ilya du Shark</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Lagos State College of Health Technology</div>
+          <div class="col">Ilya du LASCOHET</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Ahmadu Bello University, Zaria</div>
+          <div class="col">Ilya du Turban</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed. Uni Of Edu., Zaria</div>
+          <div class="col">Ilya du Zauzau</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Kaduna Polytechnic</div>
+          <div class="col">Ilya du Arewa</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed. Poly. Bida</div>
+          <div class="col">Ilya du Solar</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed. Col Of Edu. Kotangora</div>
+          <div class="col">Ilya du Kotang</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed Uni. Of Tech. Minna</div>
+          <div class="col">Ilya du Komputer</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed. Poly Binin-Kebbi</div>
+          <div class="col">Ilya du Desert</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed Col. Of Edu. Kano</div>
+          <div class="col">Ilya du Pyramid</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">University of Maiduguri</div>
+          <div class="col">Ilya du Sahara</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">University of Jos</div>
+          <div class="col">Ilya du Rock</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Col Of Edu. Panskinki</div>
+          <div class="col">Ilya du Airkon</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed. Poly. Nasarawa</div>
+          <div class="col">Ilya du Melon</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Federal Polytechnic Bauchi</div>
+          <div class="col">Ilya du Yankari</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Nuhu Bamalli Polytechnic, Zaria</div>
+          <div class="col">Ilya du Caliphate</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Ambrose Alli University. Ekpoma</div>
+          <div class="col">Ilya du Bensu</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">University of Benin</div>
+          <div class="col">Ilya du Ovia</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Col. Of Edu. Ekiadolor</div>
+          <div class="col">Ilya du VHF (Very High Frequency)</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed. Poly Auchi</div>
+          <div class="col">Ilya du Poly</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Petroleum Training Institute, (PTI) Warri </div>
+          <div class="col">Ilya du Excess</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Delta State University, Abraka</div>
+          <div class="col">Ilya du Bishop</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Moshood Abiola Polytechnic, Abeokuta</div>
+          <div class="col">Ilya du Olumo</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed, Poly. Ilaro</div>
+          <div class="col">Ilya du Oronna</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed. Col. Education, Abeokuta- Osiele</div>
+          <div class="col">Ilya du Fatika</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Tai Solarin College of Education, Ijebu-Ode</div>
+          <div class="col">Ilya du Ogun</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Obafemi Awolowo University</div>
+          <div class="col">Ilya du</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">University of Ibadan</div>
+          <div class="col">Ilya du</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">– School Of Health Tech. Ijebu-Ode</div>
+          <div class="col">Ilya du Healtheco</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Olabisi Onabanjo University, Ago Iwo Oye</div>
+          <div class="col">Ilya du Meleke</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Federal University Of Agriculture Abeokuta</div>
+          <div class="col">Ilya du Lisabi</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Tai Solarin University Of Education, Ijagun</div>
+          <div class="col">Ilya du Moromoji</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Abraham Adesaya Poly Ijebu Igbo</div>
+          <div class="col">Ilya du Molusi</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">College Of Edu. Ilesha</div>
+          <div class="col">Ilya du Chalk</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">College Of Edu. Ila-Orangun</div>
+          <div class="col">Ilya du Ula</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed. Poly, Ede</div>
+          <div class="col">Ilya du Agbale</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Osun State Poly, Iree</div>
+          <div class="col">Ilya du Onion</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Osun State College Of Technology Esa-Oke</div>
+          <div class="col">Ilya du Mountain</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Adeyemi College Of Edu. Orido</div>
+          <div class="col">Ilya du Ondo</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Rufus Giwa Poly, Owo</div>
+          <div class="col">Ilya du Imade</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Federal University of Technology Akure</div>
+          <div class="col">Ilya du Oyemekun</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Adekunle Ajasin University</div>
+          <div class="col">Ilya du Hill</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">University of Ado-Ekiti</div>
+          <div class="col">Ilya du Odua</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Ekiti State Col. Of Edu</div>
+          <div class="col">Ilya du Olosunta</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed. Poly, Ado – Ekiti</div>
+          <div class="col">Ilya du FEDECO</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">University of Ilorin</div>
+          <div class="col">Ilya du Unilorin</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Kwara State Col. Of Edu</div>
+          <div class="col">Ilya du Afonja</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Kwara State Polytechnic</div>
+          <div class="col">Ilya du Kwateco</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Fed. Poly Offa</div>
+          <div class="col">Ilya du Potato</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">I.A.R.& T Ibadan Moor Plantation</div>
+          <div class="col">Ilya du Moor</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Emmanuel Alayande College of Education, Oyo</div>
+          <div class="col">Ilya du Atiba</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Federal College Of Edu. Special Oyo</div>
+          <div class="col">Ilya du Sped</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Lautech. Ogbomosho</div>
+          <div class="col">Ilya du Kakanfo</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Federal College Of Surveying. Oyo</div>
+          <div class="col">Ilya du Survey</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">The Polytechnic Ibadan</div>
+          <div class="col">Ilya du Poly, Ibadan</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Oyo State College Of Agriculture, Igbo Ora</div>
+          <div class="col">Ilya du Twins</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">University of Uyo</div>
+          <div class="col">Ilya du Riverine</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Institute Of Accountancy & Basic Studies, Uyo</div>
+          <div class="col">Ilya du Calculator</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">University of Calabar</div>
+          <div class="col">Ilya du Unical</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">The Polytechnic Calabar</div>
+          <div class="col">Ilya du Anansa</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Col. Of Edu. Afah</div>
+          <div class="col">Ilya du Mask</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">River State University Of Sci. & Tech</div>
+          <div class="col">Ilya du Porta Porta</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">University of Port Harcourt</div>
+          <div class="col">Ilya du Uniport</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Col. Of Edu. Portharcourt</div>
+          <div class="col">Ilya du Riva</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Niger Delta University</div>
+          <div class="col">Ilya du Spring</div>
+        </div>
+        <div class="ilya-row">
+          <div class="col">Rivers State Polytechnic Bori Ogoni</div>
+          <div class="col">Ilya du Kensaro</div>
+        </div>
+        
+        <!-- Add more Ilyasis here -->
+      </section>
+
+      <section class="ilya-submission">
+        <h2>Submit Your Ilya</h2>
+        <form id="ilyaForm">
+          <input type="text" id="submitterName" placeholder="Your Name" required />
+          <input type="text" id="schoolName" placeholder="Institution Name" required />
+          <input type="text" id="ilyaName" placeholder="Ilya Name (if known)" />
+          <textarea id="ilyaNote" placeholder="Anything else to add?"></textarea>
+          <button type="submit">Submit to Admin</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/home.js"></script>
+  <script src="js/ilyasis.js"></script>
+</body>
+</html>

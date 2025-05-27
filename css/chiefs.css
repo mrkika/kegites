@@ -1,0 +1,186 @@
+/* Reuse sidebar styles from home.css */
+
+/* Table styling */
+.chiefs-table-section {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+#searchInput {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.chiefs-table {
+  display: grid;
+  gap: 10px;
+}
+
+.table-header, .chiefs-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background: #e9ffe9;
+  padding: 10px;
+  border-radius: 6px;
+  align-items: center;
+}
+
+.table-header {
+  background: #228B22;
+  color: white;
+  font-weight: bold;
+}
+
+.chiefs-row:nth-child(even) {
+  background: #f0fff0;
+}
+
+.chiefo-submission {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff8e1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.chiefo-submission h2 {
+  text-align: center;
+  color: #654321;
+  margin-bottom: 15px;
+}
+
+#chiefoForm input {
+  width: 90%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#chiefoForm button {
+  width: 100%;
+  padding: 12px;
+  background: #654321;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .table-header, .chiefs-row {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    padding: 10px 5px;
+  }
+  .table-header > div, .chiefs-row > div {
+    padding: 6px 10px;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .table-header, .chiefs-row {
+    grid-template-columns: 1fr;
+    padding: 8px 5px;
+    row-gap: 8px;
+    font-size: 14px;
+  }
+
+  .table-header > div, .chiefs-row > div {
+    padding: 5px 8px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .chiefo-submission {
+    padding: 15px;
+    margin: 20px 10px;
+  }
+
+  #chiefoForm input, #chiefoForm button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #searchInput {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+.chiefs-table-wrapper {
+  overflow-x: auto;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+.chiefs-table {
+  display: grid;
+  min-width: 700px; /* Ensures table overflows on small screens */
+  gap: 10px;
+}
+
+.table-header,
+.chiefs-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background: #e9ffe9;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.table-header {
+  background: #228B22;
+  color: white;
+  font-weight: bold;
+}
+
+.content-area {
+  margin-left: 220px;
+  padding: 20px;
+  height: auto;
+  overflow: auto;
+}
+
+@media (max-width: 768px) {
+  .content-area {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .chiefo-submission {
+    margin-top: 30px;
+  }
+}
+
+.sidebar-contact-btn {
+  margin: 20px;
+  padding: 10px 16px;
+  background-color: #ffffff;
+  color: #064a0d;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 80%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-contact-btn:hover {
+  background-color: #dfffdc;
+}

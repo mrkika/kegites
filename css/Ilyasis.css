@@ -1,0 +1,163 @@
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #064a0d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar nav ul li:hover, .sidebar nav ul li.active {
+  background-color: #0b6d16;
+}
+
+.contact-admin {
+  margin: 20px;
+  padding: 10px 16px;
+  background-color: #ffffff;
+  color: #064a0d;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 80%;
+}
+
+/* Content Area */
+.content-area {
+  margin-left: 220px;
+  padding: 20px;
+  height: 100vh;
+  overflow: auto;
+}
+
+header {
+  background-color: #6b3e26;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1100; /* Higher than sidebar */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .content-area {
+    margin-left: 0;
+  }
+}
+
+/* Your existing ilya table and form styles can follow here */
+.ilya-table {
+  display: grid;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.table-header,
+.ilya-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #e9ffe9;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.table-header {
+  background: #228B22;
+  color: white;
+  font-weight: bold;
+}
+
+.ilya-submission {
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff8e1;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.ilya-submission h2 {
+  text-align: center;
+  color: #654321;
+  margin-bottom: 15px;
+}
+
+#ilyaForm input,
+#ilyaForm textarea {
+  width: 90%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#ilyaForm button {
+  background: #654321;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+}

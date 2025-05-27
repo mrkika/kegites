@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test of Kariability</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="background-overlay">
+    <img src="assets/my-logo2.png" class="logo" alt="Kegites Club Logo">
+    <div class="prompt-box">
+      <h2>Who Are Wa?</h2>
+      <h2>Test of Kariability</h2>
+      <p>Enter any 4 Tests of Kariability below:</p>
+      <form id="kariabilityForm">
+        <input type="text" name="test1" placeholder="TOK 1" required>
+        <input type="text" name="test2" placeholder="TOK 2" required>
+        <input type="text" name="test3" placeholder="TOK 3" required>
+        <input type="text" name="test4" placeholder="TOK 4" required>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="result-message" class="result-message"></p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("kariabilityForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const validTests = [
+        "drumitization",
+        "migration",
+        "songitization",
+        "vibration",
+        "olarization",
+        "cowrization",
+        "imbibementation"
+      ];
+
+      const inputs = Array.from(this.elements)
+        .filter(el => el.tagName === 'INPUT')
+        .map(el => el.value.trim().toLowerCase());
+
+      let correctCount = 0;
+      let matched = [];
+
+      inputs.forEach(input => {
+        if (validTests.includes(input) && !matched.includes(input)) {
+          matched.push(input);
+          correctCount++;
+        }
+      });
+
+      const message = document.getElementById("result-message");
+
+      if (correctCount >= 4) {
+        message.textContent = "You Are Karid! Redirecting...";
+        message.style.color = "white";
+        setTimeout(() => {
+          window.location.href = "home.html"; // Full dashboard (to be created)
+        }, 1500);
+      } else {
+        message.textContent = "Animalay With A Long Tail, Walk Never Stumble.";
+        message.style.color = "white";
+        setTimeout(() => {
+          window.location.href = "history101.html";
+        }, 2500);
+      }
+    });
+    
+    
+  </script>
+</body>
+</html>

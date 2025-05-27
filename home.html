@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kegites Club - Keg 101</title>
+  <link rel="stylesheet" href="css/home.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  
+<script>
+  // Redirect if not authorized
+  if (localStorage.getItem('isKarid') !== 'true') {
+    window.location.href = 'home.html';
+  }
+</script>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <img src="assets/my-logo2.png" class="sidebar-logo" alt="Kegites Logo" />
+      <nav>
+        <ul>
+          <li onclick="loadPage('home')">Home</li>
+                   <li onclick="window.location.href='history.html'">History</li>
+                    <li onclick="window.location.href='ilyasis.html'">Ilyasis</li>
+<li onclick="window.location.href='chiefs.html'">Chiefisis</li>
+<li onclick="window.location.href='fellowsis.html'">Fellowsis Council</li>
+          <li onclick="window.location.href='book.html'">Book of Bookosis</li>
+        </ul>
+      </nav>
+      <!-- Contact Admin button at bottom -->
+      <button class="sidebar-contact-btn" onclick="contactAdmin()">Contact Admin</button>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content-area">
+      <header>
+        <!-- Hamburger icon to the left -->
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        <h1 id="section-title">SUPREMOST COMRADIUM!</h1>
+      </header>
+
+<!-- Hero Section with Image and Text -->
+<section class="hero-section">
+  <div class="hero-text">
+    
+  </div>
+</section>
+    </main>
+  </div>
+
+  <script src="js/home.js"></script>
+</body>
+</html>

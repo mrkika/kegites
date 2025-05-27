@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fellowsis Council</title>
+  <link rel="stylesheet" href="css/home.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    .fellows-table-wrapper {
+      overflow-x: auto;
+      margin: 20px auto;
+      max-width: 800px;
+    }
+
+    .fellows-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 400px;
+      background: white;
+    }
+
+    .fellows-table th,
+    .fellows-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    .fellows-table th {
+      background-color: #064a0d;
+      color: white;
+    }
+
+    .fellows-form {
+      max-width: 600px;
+      margin: 30px auto;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .fellows-form h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #064a0d;
+    }
+
+    .fellows-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    .fellows-form button {
+      background-color: #064a0d;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .fellows-table th,
+      .fellows-table td {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <script>
+  // Redirect if not authorized
+  if (localStorage.getItem('isKarid') !== 'true') {
+    window.location.href = 'home.html';
+  }
+</script>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <img src="assets/logo.png" class="sidebar-logo" alt="Kegites Logo" />
+      <nav>
+        <ul>
+          <li onclick="location.href='home.html'">Home</li>
+          <li onclick="location.href='history.html'">History</li>
+          <li onclick="location.href='ilyasis.html'">Ilyasis</li>
+          <li onclick="location.href='chiefs.html'">Chiefisis</li>
+          <li class="active">Fellowsis Council</li>
+          <li onclick="location.href='book.html'">Book of Bookosis</li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/2348137992319?text=Hello%20Admin%2C%20I%20have%20an%20inquiry%20about%20the%20Fellowsis%20Council." 
+         class="sidebar-contact-btn" target="_blank">
+        Contact Admin
+      </a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <header>
+        <h1>Fellowsis Council</h1>
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+      </header>
+
+      <section class="fellows-table-wrapper">
+        <table class="fellows-table">
+          <thead>
+            <tr>
+              <th>Tent Name</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Accra Fellowsis Tent</td><td>Accra, Ghana</td></tr>
+            <tr><td>London Fellowsis Tent</td><td>London, UK</td></tr>
+            <tr><td>Lagos Mainland Tent</td><td>Lagos, Nigeria</td></tr>
+            <tr><td>Abuja Fellowsis Tent</td><td>Abuja, Nigeria</td></tr>
+            <tr><td>USA Eastern Tent</td><td>New York, USA</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="fellows-form">
+        <h2>Submit a Fellowsis Tent</h2>
+        <form action="https://wa.me/2348137992319" method="GET" target="_blank" onsubmit="return sendTentInfo()">
+          <input type="text" id="submitter" placeholder="Your Name" required />
+          <input type="text" id="tentName" placeholder="Tent Name" required />
+          <input type="text" id="tentLocation" placeholder="Tent Location" required />
+          <input type="text" id="kurdinator" placeholder="Tent Kurdinator" required />
+          <input type="text" id="yearEstablished" placeholder="Year Established" required />
+          <button type="submit">Submit to Admin</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function sendTentInfo() {
+      const name = document.getElementById("submitter").value;
+      const tent = document.getElementById("tentName").value;
+      const location = document.getElementById("tentLocation").value;
+      const kurdinator = document.getElementById("kurdinator").value;
+      const year = document.getElementById("yearEstablished").value;
+
+      const msg = `New Fellowsis Tent Submission:\nName: ${name}\nTent: ${tent}\nLocation: ${location}\nKurdinator: ${kurdinator}\nYear Established: ${year}`;
+      const encoded = encodeURIComponent(msg);
+      const phone = "2348137992319"; // Replace with your number
+      const url = `https://wa.me/${phone}?text=${encoded}`;
+      window.open(url, "_blank");
+      return false;
+    }
+  </script>
+  
+  <script>
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+
+  menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+</script>
+</body>
+</html>

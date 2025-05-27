@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book of Bookosis</title>
+  <link rel="stylesheet" href="css/book.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  
+<script>
+  // Redirect if not authorized
+  if (localStorage.getItem('isKarid') !== 'true') {
+    window.location.href = 'home.html';
+  }
+</script>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <img src="assets/my-logo2.png" class="sidebar-logo" alt="Kegites Logo" />
+      <nav>
+        <ul>
+          <li onclick="navigate('home.html')">Home</li>
+          <li onclick="navigate('history.html')">History</li>
+          <li onclick="navigate('ilyasis.html')">Ilyasis</li>
+          <li onclick="navigate('chiefs.html')">Chiefisis</li>
+          <li onclick="navigate('fellows.html')">Fellowsis Council</li>
+          <li class="active">Book of Bookosis</li>
+        </ul>
+      </nav>
+      <button class="sidebar-contact-btn" onclick="contactAdmin()">Contact Admin</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <header>
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        <h1>Book of Bookosis</h1>
+      </header>
+
+      <section class="book-container">
+        <div id="chapter-content" class="chapter">
+          <!-- Chapter content loads here -->
+        </div>
+
+        <div class="chapter-nav">
+          <button onclick="prevChapter()">&#8592; Prev</button>
+          <span id="chapter-number">Chapter 1</span>
+          <button onclick="nextChapter()">Next &#8594;</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <section class="quote-submission">
+  <h2>Submit A Quote</h2>
+  <form id="quoteForm">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="text" id="institution" placeholder="Institution / Ilya" required />
+    <textarea id="quote" placeholder="Enter the quotation" required></textarea>
+    <button type="submit">Submit to Admin</button>
+  </form>
+</section>
+
+  <script src="js/book.js"></script>
+</body>
+</html>
