@@ -8,12 +8,7 @@
 </head>
 <body>
   
-<script>
-  // Redirect if not authorized
-  if (localStorage.getItem('isKarid') !== 'true') {
-    window.location.href = 'home.html';
-  }
-</script>
+
   <div class="dashboard">
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
@@ -61,6 +56,13 @@
     <button type="submit">Submit to Admin</button>
   </form>
 </section>
+
+<script>
+  // Redirect if not authorized
+  if (localStorage.getItem('isKarid') !== 'true') {
+    window.location.href = 'home.html';
+  }
+</script>
 
   <script src="js/book.js"></script>
 </body>

@@ -76,12 +76,7 @@
   </style>
 </head>
 <body>
-  <script>
-  // Redirect if not authorized
-  if (localStorage.getItem('isKarid') !== 'true') {
-    window.location.href = 'home.html';
-  }
-</script>
+  
   <div class="dashboard">
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
@@ -165,6 +160,12 @@
   menuToggle.addEventListener('click', () => {
     sidebar.classList.toggle('active');
   });
+</script>
+<script>
+  // Redirect if not authorized
+  if (localStorage.getItem('isKarid') !== 'true') {
+    window.location.href = 'home.html';
+  }
 </script>
 </body>
 </html>

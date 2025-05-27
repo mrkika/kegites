@@ -88,12 +88,7 @@
 </head>
 <body>
   
-<script>
-  // Redirect if not authorized
-  if (localStorage.getItem('isKarid') !== 'true') {
-    window.location.href = 'home.html';
-  }
-</script>
+
   <div class="dashboard">
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
@@ -242,5 +237,11 @@
       window.open(whatsappURL, '_blank');
     });
   </script>
+<script>
+  // Redirect if not authorized
+  if (localStorage.getItem('isKarid') !== 'true') {
+    window.location.href = 'home.html';
+  }
+</script>
 </body>
 </html>

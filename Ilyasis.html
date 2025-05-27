@@ -9,12 +9,7 @@
 </head>
 <body>
   
-<script>
-  // Redirect if not authorized
-  if (localStorage.getItem('isKarid') !== 'true') {
-    window.location.href = 'home.html';
-  }
-</script>
+
   <div class="dashboard">
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
@@ -448,6 +443,13 @@
       </section>
     </main>
   </div>
+
+  <script>
+    // Redirect if not authorized
+    if (localStorage.getItem('isKarid') !== 'true') {
+      window.location.href = 'home.html';
+    }
+  </script>
 
   <script src="js/home.js"></script>
   <script src="js/ilyasis.js"></script>
