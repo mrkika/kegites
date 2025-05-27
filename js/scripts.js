@@ -17,5 +17,5 @@ function askKariability() {
 }
 
 function redirectToLimited() {
-  window.location.href = '/history101.html';
+  window.location.href = 'history101.html';
 }
